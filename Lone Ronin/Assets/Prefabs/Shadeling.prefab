@@ -909,6 +909,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4467757482891228}
   - component: {fileID: 111670102475343736}
+  - component: {fileID: 2231177773888084785}
   m_Layer: 0
   m_Name: Shadeling
   m_TagString: Untagged
@@ -925,7 +926,7 @@ Transform:
   m_GameObject: {fileID: 1309486516299566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.008842, y: 0.62827015, z: -11.92}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 4637244262425910}
   - {fileID: 4541051732229186}
@@ -957,6 +958,22 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!54 &2231177773888084785
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309486516299566}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1312574273513674
 GameObject:
   m_ObjectHideFlags: 0
