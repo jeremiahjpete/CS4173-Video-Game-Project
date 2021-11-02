@@ -911,6 +911,7 @@ GameObject:
   - component: {fileID: 111670102475343736}
   - component: {fileID: 2231177773888084785}
   - component: {fileID: -2368556641291463408}
+  - component: {fileID: -3313680639225953342}
   m_Layer: 0
   m_Name: Shadeling
   m_TagString: Untagged
@@ -944,11 +945,10 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309486516299566}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400002, guid: ce65fa103f0e84b4289374b2a4bf93f8, type: 3}
+  m_Animation: {fileID: 7400004, guid: ce65fa103f0e84b4289374b2a4bf93f8, type: 3}
   m_Animations:
-  - {fileID: 7400000, guid: ce65fa103f0e84b4289374b2a4bf93f8, type: 3}
   - {fileID: 7400002, guid: ce65fa103f0e84b4289374b2a4bf93f8, type: 3}
   - {fileID: 7400004, guid: ce65fa103f0e84b4289374b2a4bf93f8, type: 3}
   - {fileID: 7400006, guid: ce65fa103f0e84b4289374b2a4bf93f8, type: 3}
@@ -956,9 +956,9 @@ Animation:
   - {fileID: 7400010, guid: ce65fa103f0e84b4289374b2a4bf93f8, type: 3}
   - {fileID: 7400012, guid: ce65fa103f0e84b4289374b2a4bf93f8, type: 3}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
-  m_CullingType: 1
+  m_CullingType: 0
 --- !u!54 &2231177773888084785
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -967,7 +967,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309486516299566}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 75
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -986,7 +986,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: ce65fa103f0e84b4289374b2a4bf93f8, type: 3}
   m_Controller: {fileID: 9100000, guid: cf7594263e8947c46a311d964dd68170, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -994,6 +994,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-3313680639225953342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309486516299566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac16a7688db8054e8d0db827bb18795, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementForce: 0.1
+  gravityModifier: 0
+  isOnGround: 1
+  isDead: 0
+  deathParticle: {fileID: 0}
+  voiceSound: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!1 &1312574273513674
 GameObject:
   m_ObjectHideFlags: 0
