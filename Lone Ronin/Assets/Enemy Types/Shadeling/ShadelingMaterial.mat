@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GhoulMaterial
+  m_Name: ShadelingMaterial
   m_Shader: {fileID: 4800000, guid: a2991a03359ecf049a1a006c200406cc, type: 3}
   m_ShaderKeywords: _EMISSIONSWITCH_ON _SMOOTHFROMMAPSWITCH_ON
   m_LightmapFlags: 0
