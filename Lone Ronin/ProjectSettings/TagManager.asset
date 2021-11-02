@@ -8,6 +8,7 @@ TagManager:
   - Play Button
   - Option Button
   - Options
+  - Wall
   layers:
   - Default
   - TransparentFX

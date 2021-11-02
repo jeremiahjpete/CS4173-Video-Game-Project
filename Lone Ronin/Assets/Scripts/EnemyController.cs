@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
     private Rigidbody enemyRb;
+    private GameObject player; // for enemies to follow player
     private Animator enemyAnim;
     private AudioSource enemyAudio;
-    public float movementForce = 1.0f;
-    public float gravityModifier;
-    public bool isOnGround = true;
+
+    public float speed;
+    //public float gravityModifier;
     public bool isDead = false;
     public ParticleSystem deathParticle;
     public AudioClip voiceSound;
@@ -17,15 +18,15 @@ public class EnemyController : MonoBehaviour {
     // Start is called before the first frame update
     void Start() {
         enemyRb = GetComponent<Rigidbody>();
-        Physics.gravity *= gravityModifier;
+        //Physics.gravity *= gravityModifier;
         enemyAnim = GetComponent<Animator>();
         enemyAudio = GetComponent<AudioSource>();
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
     void Update() {
-        enemyRb.AddForce(Vector3.forward * movementForce, ForceMode.Impulse);
-        isOnGround = false;
+        enemyRb.AddForce((player.transform.position - transform.position).normalized * speed);
         // play voiceSound audio
         //enemyAudio.PlayOneShot(voiceSound, 1.0f);
     }
