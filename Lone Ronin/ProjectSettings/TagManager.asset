@@ -9,6 +9,7 @@ TagManager:
   - Option Button
   - Options
   - Wall
+  - Weapon
   layers:
   - Default
   - TransparentFX
