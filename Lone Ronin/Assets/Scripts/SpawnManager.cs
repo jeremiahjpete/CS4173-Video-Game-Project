@@ -17,7 +17,7 @@ public class SpawnManager : MonoBehaviour
         int oniIndex;
         // Randomly generate oni index and spawn position
         for (int i = 0; i < 20; i++) {
-            spawnPos = new Vector3(Random.Range(-spawnRange, spawnRange), 0, Random.Range(-spawnRange, spawnRange));
+            spawnPos = new Vector3(Random.Range(-spawnRange, spawnRange), 0.1f, Random.Range(-spawnRange, spawnRange));
             oniIndex = Random.Range(0, oniPrefabs.Length);
             Instantiate(oniPrefabs[oniIndex], spawnPos, oniPrefabs[oniIndex].transform.rotation);
         }
