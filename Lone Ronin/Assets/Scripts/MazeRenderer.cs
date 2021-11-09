@@ -33,9 +33,9 @@ public class MazeRenderer : MonoBehaviour
         var floor = Instantiate(floorPrefab, transform); // create the floor prefab first
         floor.localScale = new Vector3(width, 1, height); // floor is as large as the width times the height
 
-        for (int i = 0; i < width; ++i)
+        for (int i = 0; i < width; ++i) // for the width of the maze limit
         {
-            for (int j = 0; j < height; ++j)
+            for (int j = 0; j < height; ++j) // for the length of the maze limit
             {
                 var cell = maze[i, j]; // generate a cell at the point i, j
                 var position = new Vector3(-width / 2 + i, 0, -height / 2 + j); // generate a new wall position

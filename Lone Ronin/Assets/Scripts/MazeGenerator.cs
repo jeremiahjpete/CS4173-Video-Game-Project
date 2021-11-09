@@ -28,9 +28,9 @@ public struct Neighbor // Neighbors given so no shared walls are deleted during 
 
 public static class MazeGenerator // main maze generator
 {
-    private static WallState GetOppositeWall(WallState wall)
+    private static WallState GetOppositeWall(WallState wall) // create another wall to create thicker walls
     {
-        switch (wall)
+        switch (wall) // switch for the random rotation of the walls
         {
             case WallState.RIGHT : return WallState.LEFT;
             case WallState.LEFT : return WallState.RIGHT;
@@ -43,10 +43,10 @@ public static class MazeGenerator // main maze generator
     private static WallState[,] ApplyRecursiveBacktracker(WallState[,] maze, int width, int height) // recursive backtracker for maze generation with width and height limiters
     {
         var rng = new System.Random(/*seed*/); // random seed generates maze
-        var positionStack = new Stack<Position>();
-        var position = new Position { X = rng.Next(0, width), Y = rng.Next(0, height) };
-        maze[position.X, position.Y] |= WallState.VISITED;
-        positionStack.Push(position);
+        var positionStack = new Stack<Position>(); // create a new stack that holds the position of all the walls
+        var position = new Position { X = rng.Next(0, width), Y = rng.Next(0, height) }; // create a new random position for the wall
+        maze[position.X, position.Y] |= WallState.VISITED; // count the wall just generated as visited so new walls wont be generated on top of it
+        positionStack.Push(position); // push the position of the wall onto the stack
 
         while(positionStack.Count > 0) // while there is still something in the stack
         {
@@ -67,7 +67,7 @@ public static class MazeGenerator // main maze generator
             }
         }
 
-        return maze;
+        return maze; // generate the maze
     }
 
     private static List<Neighbor> GetUnvisitedNeighbors(Position p, WallState[,] maze, int width, int height) // finds unvisited neighbors with width and height limiters
