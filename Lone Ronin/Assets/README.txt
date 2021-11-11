@@ -23,5 +23,6 @@ This is currently the scope of the gameplay
 ### Sources
 The Oni appearances were found on the Unity asset store, as well as the animations that go with them. 
 The player animations are being personally created, which is why they aren't currently done.
+Also, the first-person view point was something that Unity has as a standard asset, which is what we used in order to help simplify the process.
 
 Overall this is a simple game that conceptually mimics aspects of DOOM, and is designed to be a fun, 10-15 minute playthrough that players can enjoy for free.
