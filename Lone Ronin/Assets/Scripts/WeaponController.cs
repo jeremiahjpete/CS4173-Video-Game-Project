@@ -16,8 +16,9 @@ public class WeaponController : MonoBehaviour
     void Update()
     {
         // swing/attack animation trigger
-        if (Input.GetButtonDown("R")) {
+        if (Input.GetKeyDown(KeyCode.R)) {
             anim.Play("Sword_Swing");
+            
         }
     }
 }
