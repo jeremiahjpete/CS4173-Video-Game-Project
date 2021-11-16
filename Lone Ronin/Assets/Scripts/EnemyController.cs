@@ -22,7 +22,7 @@ public class EnemyController : MonoBehaviour {
         //Physics.gravity *= gravityModifier;
         enemyAnim = GetComponent<Animator>();
         enemyAudio = GetComponent<AudioSource>();
-        //player = GameObject.Find("Player");
+        //Player = GameObject.Find("Player").transform;
         Player = GameObject.FindWithTag("Player").transform;
     }
 
@@ -30,10 +30,10 @@ public class EnemyController : MonoBehaviour {
     void Update() {
         enemyRb.AddForce((Player.transform.position - transform.position).normalized * movementSpeed);
         transform.LookAt(Player);
-        if (Vector3.Distance(transform.position, Player.position) >= 3) {
+        if (Vector3.Distance(transform.position, Player.position) >= 1) {
             transform.position += transform.forward * movementSpeed * Time.deltaTime;
             
-            if (Vector3.Distance(transform.position, Player.position) <= 2) {
+            if (Vector3.Distance(transform.position, Player.position) <= 1) {
                 // play attack animation
             }
         }
