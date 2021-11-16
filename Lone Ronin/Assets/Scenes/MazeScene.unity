@@ -195,6 +195,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1600732338279946176, guid: 4f63ec36e76bdc849b60ac5e023da173, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6417580404016796476, guid: 4f63ec36e76bdc849b60ac5e023da173, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.2672552
@@ -246,6 +250,10 @@ PrefabInstance:
     - target: {fileID: 6417580404806951385, guid: 4f63ec36e76bdc849b60ac5e023da173, type: 3}
       propertyPath: m_Name
       value: FPSController
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737873402673378810, guid: 4f63ec36e76bdc849b60ac5e023da173, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8737873402673378810, guid: 4f63ec36e76bdc849b60ac5e023da173, type: 3}
       propertyPath: m_Animation
@@ -508,3 +516,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2117865479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6417580404016640632, guid: 4f63ec36e76bdc849b60ac5e023da173, type: 3}
+  m_PrefabInstance: {fileID: 680114932}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2117865486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117865479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0706a0ad91f824d9101fa473614619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
