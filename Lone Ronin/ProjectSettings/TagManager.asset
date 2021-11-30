@@ -10,6 +10,7 @@ TagManager:
   - Options
   - Wall
   - Weapon
+  - Kill
   layers:
   - Default
   - TransparentFX
