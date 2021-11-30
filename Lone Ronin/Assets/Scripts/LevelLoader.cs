@@ -13,12 +13,17 @@ public class LevelLoader : MonoBehaviour
     void Start()
     {
         startButton.onClick.AddListener(TaskOnClick); // when the start button is clicked, add a listener
+
     }
     // Update is called once per frame
     void Update()
     {
-        
+       if (Input.GetKeyDown(KeyCode.N))
+        {
+            LoadNextLevel();
+        } 
     }
+    
 
     void TaskOnClick() // when the 'play' button is clicked
     {
