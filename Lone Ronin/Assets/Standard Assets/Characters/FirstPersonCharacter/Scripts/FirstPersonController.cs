@@ -45,13 +45,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         Animator anim;
         public bool gameOver = false;
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnTriggerEnter(Collider other)
         {
-            if (collision.gameObject.CompareTag("Kill"))
-            {
-                gameOver = true;
-                Debug.Log("Game Over");
-            }
+            gameOver = true;
+            Destroy(gameObject);
         }
 
         // Use this for initialization
