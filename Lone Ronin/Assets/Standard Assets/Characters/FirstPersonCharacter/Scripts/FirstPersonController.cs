@@ -43,12 +43,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
         Animator anim;
-        public bool gameOver = false;
 
+        public bool gameOver = false;
+        
+        
         private void OnTriggerEnter(Collider other)
         {
             gameOver = true;
             Destroy(gameObject);
+            
+
         }
 
         // Use this for initialization
