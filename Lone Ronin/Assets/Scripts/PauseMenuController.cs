@@ -40,8 +40,13 @@ public class PauseMenuController : MonoBehaviour
 
     // function to quit game
     public void QuitGame(int scene) {
-        Time.timeScale = 1f;
+        // Make mouse visible
+        
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        pauseMenu.SetActive(false);
+        isPaused = false;
+        Time.timeScale = 1f;
         SceneManager.LoadScene(scene);
     }
 }
