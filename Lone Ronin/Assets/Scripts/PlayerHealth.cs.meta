@@ -3,7 +3,8 @@ guid: c6f0c891d8d047848b4c60f95ef6eb43
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - dedmusic: {fileID: 8300000, guid: 22051f01e6cb72e4fb52fbca02f6e025, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
