@@ -30,11 +30,15 @@ public class EnemyController : MonoBehaviour {
     void Update() {
         enemyRb.AddForce((Player.transform.position - transform.position).normalized * movementSpeed);
         transform.LookAt(Player);
-        if (Vector3.Distance(transform.position, Player.position) >= 1) {
+        if (Vector3.Distance(transform.position, Player.position) >= 0.5) {
             transform.position += transform.forward * movementSpeed * Time.deltaTime;
             
-            if (Vector3.Distance(transform.position, Player.position) <= 1) {
+            if (Vector3.Distance(transform.position, Player.position) <= 0.5) {
                 // play attack animation
+                enemyAnim.Play("Z_Attack");
+            }
+            else {
+                enemyAnim.Play("Z_Run_InPlace");
             }
         }
         // play voiceSound audio
