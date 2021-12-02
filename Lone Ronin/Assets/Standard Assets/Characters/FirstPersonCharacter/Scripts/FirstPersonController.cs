@@ -45,12 +45,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
         Animator anim;
 
         public bool gameOver = false;
-        
+        public bool hasPowerup = false;
         
         private void OnTriggerEnter(Collider other)
         {
-            gameOver = true;
-            Destroy(gameObject);
+            if (other.CompareTag("Powerup"))
+            {
+                hasPowerup = true;
+                Destroy(other.gameObject);
+            }
+            if (other.CompareTag("Kill"))
+            {
+                gameOver = true;
+                Destroy(gameObject);
+            }
+            
             
 
         }
