@@ -33,13 +33,14 @@ public class EnemyController : MonoBehaviour {
             if (Vector3.Distance(transform.position, Player.position) <= 0.5) {
                 // play attack animation
                 enemyAnim.Play("Z_Attack");
+                // play voiceSound audio
+                enemyAudio.PlayOneShot(voiceSound, 1.0f);
             }
             else {
                 enemyAnim.Play("Z_Run_InPlace");
             }
         }
-        // play voiceSound audio
-        //enemyAudio.PlayOneShot(voiceSound, 1.0f);
+        
     }
 
     private void OnCollisionEnter(Collision collision) {
@@ -50,7 +51,7 @@ public class EnemyController : MonoBehaviour {
             enemyAnim.SetInteger("DeathType_int", 1);
             // play death animations and audio sounds
             //deathParticle.Play();
-            //enemyAudio.PlayOneShot(deathSound, 1.0f);
+            enemyAudio.PlayOneShot(deathSound, 1.0f);
         }
     }
 }
