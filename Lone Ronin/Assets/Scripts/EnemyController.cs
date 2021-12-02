@@ -30,10 +30,10 @@ public class EnemyController : MonoBehaviour {
     void Update() {
         enemyRb.AddForce((Player.transform.position - transform.position).normalized * movementSpeed);
         transform.LookAt(Player);
-        if (Vector3.Distance(transform.position, Player.position) >= 0.5 && isDead == false) {
+        if (Vector3.Distance(transform.position, Player.position) >= 0.25 && isDead == false) {
             transform.position += transform.forward * movementSpeed * Time.deltaTime;
             
-            if (Vector3.Distance(transform.position, Player.position) <= 0.5 && isDead == false) {
+            if (Vector3.Distance(transform.position, Player.position) <= 0.25 && isDead == false) {
                 AttackPlayer();
             }
             else if (isDead == true) {
