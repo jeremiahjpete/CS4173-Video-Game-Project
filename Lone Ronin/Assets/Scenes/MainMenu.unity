@@ -1250,8 +1250,18 @@ MonoBehaviour:
   m_text: 'Use directional keys/arrows to move about the map
 
 
-    Use mouse to change
-    the camera angle/view of character'
+    Press Space To
+    Jump
+
+
+    Use mouse to change the camera angle/view of character
+
+
+    Press
+    R to swing sword
+
+
+    Press p to Pause Screen'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -1260,8 +1270,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1278,8 +1288,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1314,7 +1324,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -352.0282, y: -251.30823, z: -322.2254, w: 12.378052}
+  m_margin: {x: -352.0282, y: -251.30823, z: -322.2254, w: -143.55833}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1609,8 +1619,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 360, y: -220}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 328.81274, y: -220}
+  m_SizeDelta: {x: 207.0752, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529140562
 MonoBehaviour:
@@ -1633,7 +1643,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.6313726, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -3454,6 +3464,10 @@ PrefabInstance:
       propertyPath: startButton
       value: 
       objectReference: {fileID: 1237122147}
+    - target: {fileID: 6905964677232644924, guid: a08d7eac5c44a5b488937c7c373c59d2, type: 3}
+      propertyPath: transitionTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8928745522505899709, guid: a08d7eac5c44a5b488937c7c373c59d2, type: 3}
       propertyPath: m_RootOrder
       value: 0
