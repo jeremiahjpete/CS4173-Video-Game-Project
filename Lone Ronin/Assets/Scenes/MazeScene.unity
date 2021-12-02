@@ -1802,7 +1802,7 @@ MonoBehaviour:
   - {fileID: 1998371697940912222, guid: d58be77cba3adf54cb14b15052b86514, type: 3}
   - {fileID: 7386234923825879168, guid: 95e6ef58b90ea9e46a843246af29bd1d, type: 3}
   - {fileID: 1309486516299566, guid: 227ee07e9e5b7914ba8fbb8f430be9a5, type: 3}
-  enemyCount: 10
+  enemyCount: 20
   countText: {fileID: 289859422}
   zeroDisplay: {fileID: 1097403399}
 --- !u!4 &1564404950
