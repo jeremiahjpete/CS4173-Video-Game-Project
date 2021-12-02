@@ -17,9 +17,14 @@ public class WeaponController : MonoBehaviour
     {
         // swing/attack animation trigger
         if (Input.GetKeyDown(KeyCode.R)) {
-            //anim.Play("Sword_Swing");
             anim.SetBool("isAttacking", true);
         } else if (Input.GetKeyUp(KeyCode.R))
             anim.SetBool("isAttacking", false);
     }
+
+    //void OnCollisionEnter(Collision collision) {
+        //if (collision.gameObject.tag == "Oni") {
+          //  Destroy(collision.gameObject);
+        //}
+    //}
 }

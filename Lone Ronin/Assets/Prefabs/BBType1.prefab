@@ -1680,7 +1680,7 @@ GameObject:
   - component: {fileID: 1973175464994466540}
   m_Layer: 0
   m_Name: BBType1
-  m_TagString: Untagged
+  m_TagString: Oni
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1776,7 +1776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 0.5
   attackDelay: 2
-  health: 0
+  health: 2
   isDead: 0
   deathParticle: {fileID: 0}
   voiceSound: {fileID: 8300000, guid: 5ce6bb262e363834db2b5cdef8a21155, type: 3}

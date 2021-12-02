@@ -6,7 +6,6 @@ public class EnemyController : MonoBehaviour {
     private Rigidbody enemyRb;
     private Animator enemyAnim;
     private AudioSource enemyAudio;
-
     private Transform Player; // for enemies to follow player
     public float movementSpeed;
     public float attackDelay = 1f;
@@ -29,14 +28,14 @@ public class EnemyController : MonoBehaviour {
     void Update() {
         enemyRb.AddForce((Player.transform.position - transform.position).normalized * movementSpeed);
         transform.LookAt(Player);
-        if (Vector3.Distance(transform.position, Player.position) >= 0.5) {
+        if (Vector3.Distance(transform.position, Player.position) >= 0.5 && isDead == false) {
             transform.position += transform.forward * movementSpeed * Time.deltaTime;
             
-            if (Vector3.Distance(transform.position, Player.position) <= 0.5) {
-                // play attack animation
-                enemyAnim.Play("Z_Attack");
-                // play voiceSound audio
-                enemyAudio.PlayOneShot(voiceSound, 1.0f);
+            if (Vector3.Distance(transform.position, Player.position) <= 0.5 && isDead == false) {
+                AttackPlayer();
+            }
+            else if (isDead == true) {
+                enemyAnim.Play("Z_FallingBack");
             }
             else {
                 enemyAnim.Play("Z_Run_InPlace");
@@ -45,21 +44,16 @@ public class EnemyController : MonoBehaviour {
         
     }
 
-    private void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.CompareTag("Weapon")) {
-            isDead = true;
-            Debug.Log("Enemy Hit!");
-            enemyAnim.SetBool("Death_b", true);
-            enemyAnim.SetInteger("DeathType_int", 1);
+    void OnCollisionEnter(Collision collision) {
+        if (collision.gameObject.tag == "Weapon") {
             TakeDamage(1);
-            // play death animations and audio sounds
-            //deathParticle.Play();
-            enemyAudio.PlayOneShot(deathSound, 1.0f);
         }
     }
 
     private void AttackPlayer() {
+        // play attack animation
         enemyAnim.Play("Z_Attack");
+        // play voiceSound audio
         enemyAudio.PlayOneShot(deathSound, 1.0f);
         transform.LookAt(Player);
 
@@ -75,14 +69,20 @@ public class EnemyController : MonoBehaviour {
 
     public void TakeDamage(int damage) {
         health -= damage;
+        Debug.Log("Enemy Hit!");
 
-        if (health <= 0)
+        if (health <= 0) {
+            isDead = true;
+            enemyAnim.Play("Z_FallingBack");
             Invoke(nameof(DestroyOni), 2f);
+        }
     }
 
     private void DestroyOni() {
-        enemyAnim.Play("Z_FallingBack");
         Destroy(gameObject);
+        // play death animations and audio sounds
+        //deathParticle.Play();
+        //enemyAudio.PlayOneShot(deathSound, 1.0f);
     }
 }
 
