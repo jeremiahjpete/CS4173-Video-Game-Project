@@ -23,7 +23,7 @@ public class SpawnManager : MonoBehaviour
         if (enemyCount == 0) {
             zeroDisplay.SetActive(true);
             Debug.Log("All enemies defeated! Loading next level...");
-            SceneManager.LoadScene(2);
+            Invoke(nameof(DisplayNextLevel), 4f);
         }
     }
 
@@ -42,5 +42,9 @@ public class SpawnManager : MonoBehaviour
         enemyCount -= count;
         countText.text = "Enemies Remaining: " + enemyCount;
         Debug.Log("Enemies Remaining: " + enemyCount);
+    }
+
+    void DisplayNextLevel() {
+        SceneManager.LoadScene(2);
     }
 }
