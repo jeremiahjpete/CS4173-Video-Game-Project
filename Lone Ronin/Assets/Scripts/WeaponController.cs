@@ -21,10 +21,4 @@ public class WeaponController : MonoBehaviour
         } else if (Input.GetKeyUp(KeyCode.R))
             anim.SetBool("isAttacking", false);
     }
-
-    //void OnCollisionEnter(Collision collision) {
-        //if (collision.gameObject.tag == "Oni") {
-          //  Destroy(collision.gameObject);
-        //}
-    //}
 }

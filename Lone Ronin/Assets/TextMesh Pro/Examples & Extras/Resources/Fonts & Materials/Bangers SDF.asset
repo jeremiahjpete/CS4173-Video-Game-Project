@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Bangers SDF Material
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
-  m_ShaderKeywords: BEVEL_ON GLOW_ON
+  m_ShaderKeywords: GLOW_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -54,10 +54,10 @@ Material:
     - _FaceDilate: 0
     - _FaceUVSpeedX: 0
     - _FaceUVSpeedY: 0
-    - _GlowInner: 0.05
-    - _GlowOffset: 0
-    - _GlowOuter: 0.05
-    - _GlowPower: 0.75
+    - _GlowInner: 0.174
+    - _GlowOffset: 1
+    - _GlowOuter: 0.104
+    - _GlowPower: 1
     - _GradientScale: 11
     - _LightAngle: 3.1416
     - _MaskSoftnessX: 0
@@ -69,7 +69,7 @@ Material:
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.90909094
-    - _ScaleRatioB: 0.79545456
+    - _ScaleRatioB: 0.72052044
     - _ScaleRatioC: 0.79545456
     - _ScaleX: 1
     - _ScaleY: 1
@@ -325,6 +325,20 @@ MonoBehaviour:
       m_Y: 433
       m_Width: 44
       m_Height: 105
+    m_Scale: 1
+    m_AtlasIndex: 0
+  - m_Index: 55
+    m_Metrics:
+      m_Width: 61.59375
+      m_Height: 110.390625
+      m_HorizontalBearingX: -3.9375
+      m_HorizontalBearingY: 110.25
+      m_HorizontalAdvance: 40.21875
+    m_GlyphRect:
+      m_X: 611
+      m_Y: 409
+      m_Width: 62
+      m_Height: 112
     m_Scale: 1
     m_AtlasIndex: 0
   - m_Index: 56
@@ -831,20 +845,6 @@ MonoBehaviour:
       m_Height: 105
     m_Scale: 1
     m_AtlasIndex: 0
-  - m_Index: 55
-    m_Metrics:
-      m_Width: 61.59375
-      m_Height: 110.390625
-      m_HorizontalBearingX: -3.9375
-      m_HorizontalBearingY: 110.25
-      m_HorizontalAdvance: 40.21875
-    m_GlyphRect:
-      m_X: 611
-      m_Y: 409
-      m_Width: 62
-      m_Height: 112
-    m_Scale: 1
-    m_AtlasIndex: 0
   m_CharacterTable:
   - m_ElementType: 1
     m_Unicode: 10
@@ -897,6 +897,10 @@ MonoBehaviour:
   - m_ElementType: 1
     m_Unicode: 73
     m_GlyphIndex: 54
+    m_Scale: 1
+  - m_ElementType: 1
+    m_Unicode: 74
+    m_GlyphIndex: 55
     m_Scale: 1
   - m_ElementType: 1
     m_Unicode: 75
@@ -1041,10 +1045,6 @@ MonoBehaviour:
   - m_ElementType: 1
     m_Unicode: 121
     m_GlyphIndex: 102
-    m_Scale: 1
-  - m_ElementType: 1
-    m_Unicode: 74
-    m_GlyphIndex: 55
     m_Scale: 1
   m_AtlasTextures:
   - {fileID: 28584486757587946}
