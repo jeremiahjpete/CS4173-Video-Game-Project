@@ -15,6 +15,7 @@ public class EnemyController : MonoBehaviour {
     public ParticleSystem deathParticle;
     public AudioClip voiceSound;
     public AudioClip deathSound;
+    private SpawnManager spawnManager;
 
     // Start is called before the first frame update
     void Start() {
@@ -22,6 +23,7 @@ public class EnemyController : MonoBehaviour {
         enemyAnim = GetComponent<Animator>();
         enemyAudio = GetComponent<AudioSource>();
         Player = GameObject.FindWithTag("Player").transform;
+        spawnManager = GameObject.Find("Spawn Manager").GetComponent<SpawnManager>();
     }
 
     // Update is called once per frame
@@ -71,7 +73,7 @@ public class EnemyController : MonoBehaviour {
         health -= damage;
         Debug.Log("Enemy Hit!");
 
-        if (health <= 0) {
+        if (health == 0) {
             isDead = true;
             enemyAnim.Play("Z_FallingBack");
             Invoke(nameof(DestroyOni), 2f);
@@ -80,6 +82,7 @@ public class EnemyController : MonoBehaviour {
 
     private void DestroyOni() {
         Destroy(gameObject);
+        spawnManager.UpdateCount(1);
         // play death animations and audio sounds
         //deathParticle.Play();
         //enemyAudio.PlayOneShot(deathSound, 1.0f);
