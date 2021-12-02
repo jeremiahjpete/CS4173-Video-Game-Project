@@ -1007,8 +1007,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac16a7688db8054e8d0db827bb18795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
   movementSpeed: 0.25
+  attackDelay: 1
+  health: 3
   isDead: 0
   deathParticle: {fileID: 0}
   voiceSound: {fileID: 8300000, guid: 5ce6bb262e363834db2b5cdef8a21155, type: 3}

@@ -463,6 +463,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPSController
       objectReference: {fileID: 0}
+    - target: {fileID: 6417580404808197113, guid: 4f63ec36e76bdc849b60ac5e023da173, type: 3}
+      propertyPath: m_Depth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417580404808197113, guid: 4f63ec36e76bdc849b60ac5e023da173, type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8737873402673378810, guid: 4f63ec36e76bdc849b60ac5e023da173, type: 3}
       propertyPath: m_Enabled
       value: 0
