@@ -3,18 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject titleScreen;
-    public bool isGameActive;
+    public int enemyCount;
+    public TextMeshProUGUI countText;
 
-    public void StartGame() {
-        titleScreen.gameObject.SetActive(false);
-        isGameActive = true;
-    }
-
-    public void Options() {
-        titleScreen.gameObject.SetActive(false);
+    void Start() {
+        countText.text = "Enemies Remaining: " + enemyCount;
     }
 }
