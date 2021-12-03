@@ -412,7 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6f0c891d8d047848b4c60f95ef6eb43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 30
+  health: 70
   playerCam: {fileID: 489861867}
   gameOver: {fileID: 1748319831}
 --- !u!65 &484952593
@@ -2313,7 +2313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4702425161803035826, guid: 4419f40a84407204f85f90c436ea7bd2, type: 3}
       propertyPath: MaxHealth
-      value: 30
+      value: 70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4419f40a84407204f85f90c436ea7bd2, type: 3}
