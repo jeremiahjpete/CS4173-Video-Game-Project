@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public float health;
+    public GameObject playerCam;
+    public GameObject gameOver;
 
     public void TakeDamage(int damage) {
         health -= damage;
@@ -24,6 +26,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void GameOver(int scene) {
         Debug.Log("Game Over!");
-        SceneManager.LoadScene(scene);
+        Time.timeScale = 0f;
+        gameOver.SetActive(true);
+        Destroy(playerCam);
     }
 }

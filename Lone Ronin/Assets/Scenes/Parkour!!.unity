@@ -433,6 +433,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6417580404814526521, guid: 4f63ec36e76bdc849b60ac5e023da173, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6417580404817712185, guid: 4f63ec36e76bdc849b60ac5e023da173, type: 3}
       propertyPath: m_JumpSpeed
       value: 8
@@ -2071,6 +2075,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  playerCam: {fileID: 1506688467}
+  gameOver: {fileID: 1944597929}
 --- !u!65 &1506688469
 BoxCollider:
   m_ObjectHideFlags: 0
