@@ -25,11 +25,19 @@ Alternatively, if all of the enemies are wiped out from the map, the player will
 Players can pause the game at any time by pressing 'P', which will present the options to 'Resume', toggle sound, and 'Quit'.
 Note: Quitting here will not exit the application, rather return to the main menu, and from there the application can be exited by pressing the 'Exit Game' button.
 
+### Advanced Features/Future
+There is a cheat code section in the option canvas that has been partially implemented, going as far as accepting the cheat code 'watermelon', which should change the weapon to a watermelon sword.
+It doesn't do this, as the bool value isn't properly changing, but the sword can still be seen in the dev mode by unchecking the 'isCheat' section in the WeaponManager script of the Weapon Manager object. 
+A feature that wasn't implemented is the different sword types that could be picked up from weapon beacons. This was just due to time constraints, but the approach would have been similar to how the watermelon sword was implemented, although the kunai would have been made into a throwable instead of a melee. 
+All of these assets were found in the assets store, but were not imported to the project since this portion wasn't reached in time.
+
 ### Sources
 The Oni appearances were found on the Unity asset store, as well as the animations that go with them for running and attacking.
 The weapons were also found from the asset store.
 The player/weapon animations are personally created.
 Sounds were found in both the Asset store and Youtube, with all music taken from the Creative Commons Audio Library of Youtube.
+Much scripting logic was based off previous Create With Code projects combined with previous programming knowledge. 
+The Standard Assets were given by Unity, which helped save time with the first person view, allowing us to put more focus on fleshing out the other parts of the game.
 
 Overall this is a simple game that conceptually mimics aspects of DOOM, and is designed to be a fun, 10-15 minute playthrough that players can enjoy for free.
 
